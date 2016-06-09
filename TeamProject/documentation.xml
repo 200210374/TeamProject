@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+
+
+
+
+<p> Team  project created by Brandon Roy</p>
+<!--team project 1.0 -->
+<!--this is the first version of the prject -->
+
+
+
+<!--What has been worked on : -->
+
+<!-- setup a github repository-->
+<!--setup in azure portal-->
+<!--Initial site structure 100% -->
+<!--Navbar 100% -->
+<!--need to create master page for game tracker 0%-->
+<!-- Register does not save to the database 0% -->
+
+<!--game tracker.aspx needs functionality-->
+<!--register form is finished but needs save-register.aspx to be finished to send data to the database -->
+<!--Login needs additional functionality 50%-->
+
+
+

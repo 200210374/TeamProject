@@ -1,0 +1,52 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="register.Master.cs" Inherits="TeamProject.Site1" %>
+<%@ Register Src="~/navbar.ascx" TagName="Navbar" TagPrefix="nav" %>
+
+
+<html>
+
+    <head runat="server">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <!--css-->
+        <link rel="stylesheet" type="text/css" href="css.css">
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="Content/font-awesome.min.css" rel="stylesheet" />
+        <link href="Content/app.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+        
+    </asp:ContentPlaceHolder>
+</head>
+
+<body>
+
+          <!-- As part of a header this is shown on every site thats linked to this master page  -->
+   <h1 style="text-align:center" >Brandon Roy 200210374 Team Project</h1>
+  <script src="Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+   
+        <nav:Navbar runat="server"></nav:Navbar>
+    <div>
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+   
+
+
+    <!--java-->
+    <script src="Scripts/jquery-2.2.3.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/app.js"></script>
+ 
+
+<asp:ContentPlaceHolder id="forms" runat="server">
+       <script src="Scripts/jquery.validate.unobtrusive.js"></script>
+    <script src="Scripts/jquery.validate.unobtrusive.min.js"></script>
+</asp:ContentPlaceHolder>
+</body>
+    
+
+</html>
