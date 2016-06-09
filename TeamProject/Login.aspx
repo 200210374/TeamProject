@@ -5,6 +5,7 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="forms" runat="server">
 
+    <!-- This form is a login form that will look in the sql database to verify if a user has logged in correctly-->
      <form method="POST" runat="server">
     <div class="col-md-6">  
   

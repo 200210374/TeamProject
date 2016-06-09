@@ -3,7 +3,7 @@
 
 
 <html>
-
+    <!--THis master page is for the web forms that are used in registering a user and logging in. It contains bootstrap and jquery as well-->
     <head runat="server">
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

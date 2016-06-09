@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h1>Welcome</h1>
 
-
+    <!--Home page of the website -->
 
     <p>main homepage content will be added later</p>
 </asp:Content>

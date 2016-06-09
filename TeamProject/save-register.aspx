@@ -5,3 +5,4 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="forms" runat="server">
 </asp:Content>
+<!--THis page when finished will save data to the database that is entered from register.aspx-->

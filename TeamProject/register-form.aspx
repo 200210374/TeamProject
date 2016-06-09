@@ -6,6 +6,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="forms" runat="server">
        <link href="Content/cssStyleSheet.css" rel="stylesheet" />
           <!-- Register form -->
+    <!--When finished it will send data to the sql database and save it-->
     
       <form method="POST" runat="server">
     <div class="col-md-6">  
