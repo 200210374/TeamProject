@@ -22,7 +22,7 @@
                 <li id="login" runat="server"><a href="Login.aspx"><i class="fa fa-login fa-lg"></i>Login</a></li>
                 <li id="edit" runat="server"><a href="edit.aspx"><i class="fa-fa-login fa-lg"></i>Edit account</a></li>
                 <li id="logout" runat="server"><a href="Logout.aspx"><i class="fa fa-logout fa-lg"></i>Logout</a></li>
-                     <li id="tracker" runat="server"><a href="tracker.aspx"><i class="fa fa-tracker fa-lg"></i>Game Tracker</a></li>
+                     <li id="tracker" runat="server"><a href="default.aspx"><i class="fa fa-tracker fa-lg"></i>Game Tracker</a></li>
 
                 
                   
