@@ -31,7 +31,7 @@ namespace TeamProject
         {
 
 
-
+            /*
 
                 //connect to the server
                 using (DefaultConnection con = new DefaultConnection())
@@ -52,7 +52,7 @@ namespace TeamProject
 
                 con.SaveChanges();
                 Response.Redirect("~/Home.aspx"); 
-            }
+            }*/
 
 
         }

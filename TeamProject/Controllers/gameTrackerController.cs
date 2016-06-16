@@ -12,12 +12,12 @@ namespace TeamProject.Controllers
     public class gameTrackerController : Controller
     {
         // GET: gameTracker
-        public ActionResult Index()
+/*        public ActionResult Index()
         {
 
             var entities = new tracker();
 
             return View(entities.gameTrackerSet.ToList());
-        }
+        }*/
     }
 }
