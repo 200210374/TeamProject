@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data.SqlClient;
+using System.Configuration;
+using System.Data;
 
 namespace TeamProject
 {
@@ -22,29 +25,33 @@ namespace TeamProject
         }
 
 
-
+  
         protected void Button1_Click(object sender, EventArgs e)
 
         {
 
-      using (DefaultConnection db = new DefaultConnection())
+
+
+
+                //connect to the server
+                using (DefaultConnection con = new DefaultConnection())
 
                 {
 
                 tracker newtracker = new tracker();
 
-
+                // I am greatly confused because I followed the youtube playlist exactly for this and im getting errors.
                 newtracker.day_played = radiolistdate.Text;
-                newtracker.day_played = weekPlayedTextBox.Text;
-                newtracker.day_played = who_won.Text;
-                newtracker.day_played = PointsTextBox.Text;
+                newtracker.week_played= weekPlayedTextBox.Text;
+                newtracker.who_won = who_won.Text;
+                newtracker.Points = PointsTextBox.Text;
+                newtracker.TeamBpoints = TeamBpoints.TextBox;
+
+                con.tracker.add(newtracker);
 
 
-                db.tracker.add(newtracker);
-
-
-                db.SaveChanges();
-                Response.Redirect("~/Home.aspx");
+                con.SaveChanges();
+                Response.Redirect("~/Home.aspx"); 
             }
 
 

@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="sqlDataModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'sqlData.dbo.tracker' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="tracker">
+          <Key>
+            <PropertyRef Name="day_played" />
+            <PropertyRef Name="week_played" />
+            <PropertyRef Name="who_won" />
+          </Key>
+          <Property Name="day_played" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="week_played" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="who_won" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="points" Type="int" />
+        </EntityType>
+        <EntityContainer Name="sqlDataModelStoreContainer">
+          <EntitySet Name="tracker" EntityType="Self.tracker" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [tracker].[day_played] AS [day_played], 
+    [tracker].[week_played] AS [week_played], 
+    [tracker].[who_won] AS [who_won], 
+    [tracker].[points] AS [points]
+    FROM [dbo].[tracker] AS [tracker]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="sqlDataModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tracker">
+          <Key>
+            <PropertyRef Name="day_played" />
+            <PropertyRef Name="week_played" />
+            <PropertyRef Name="who_won" />
+          </Key>
+          <Property Name="day_played" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="week_played" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="who_won" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="points" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="sqlDataEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="trackers" EntityType="Self.tracker" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="sqlDataModelStoreContainer" CdmEntityContainer="sqlDataEntities">
+          <EntitySetMapping Name="trackers">
+            <EntityTypeMapping TypeName="sqlDataModel.tracker">
+              <MappingFragment StoreEntitySet="tracker">
+                <ScalarProperty Name="day_played" ColumnName="day_played" />
+                <ScalarProperty Name="week_played" ColumnName="week_played" />
+                <ScalarProperty Name="who_won" ColumnName="who_won" />
+                <ScalarProperty Name="points" ColumnName="points" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

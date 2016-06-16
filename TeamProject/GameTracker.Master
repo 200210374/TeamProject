@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="GameTracker.master.cs" Inherits="TeamProject.GameTracker" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="GameTracker.master.cs" Inherits="sqlData" %>
 
 
 

@@ -5,8 +5,8 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="forms" runat="server">
        <link href="Content/cssStyleSheet.css" rel="stylesheet" />
-
-    @{
+    <!--THis code will be used to register user input to the database-->
+ <!--   @{
     Validation.RequireField("username", "You must enter a username");
     Validation.RequireField("password", "password is required");
     Validation.RequireField("email", "You haven't entered a email");
@@ -20,12 +20,12 @@
        password = Request.Form["password"];
       email = Request.Form["email"];
 
-       var db = Database.Open("WebPagesMovies");
-       var insertCommand = "INSERT INTO Movies (Title, Genre, Year) Values(@0, @1, @2)";
-       db.Execute(insertCommand, title, genre, year);
-       Response.Redirect("~/Movies");
+       var db = Database.Open("tracker");
+       var insertCommand = "INSERT INTO tacker () Values()";
+       db.Execute(insertCommand, username, password, email);
+       Response.Redirect("~/Home.aspx");
     }
-}
+}  -->
 
 <!DOCTYPE html>
 <html>
@@ -62,13 +62,13 @@
         <asp:TextBox runat="server" TextMode="MultiLine" Columns="12" Rows="12" Cssclass="form-control" ID="MessageTextBox" placeholder="Your message goes here" required="true"></asp:TextBox> 
                
               </div>
-        <div class="text-right">
-            <a class="btn btn-warning btn-lg" ID="CancelButton" Text="Cancel" href="home.aspx" />
-                   <asp:Button  CssClass="btn btn-warning btn-lg" ID="Cancel" Text="Cancel" runat="server" />
-             </div>
         <div class="text-left">
-            <a class="btn btn-primary btn-lg" ID="SubmitButtonText" Text="Send" href="home.aspx" />
-                   <asp:Button  CssClass="btn btn-primary btn-lg" ID="SubmitButton" Text="Submit" runat="server" />
+            
+                   <asp:Button  CssClass="btn btn-warning btn-lg" ID="Cancel" Text="Cancel" href="home.aspx" runat="server" />
+             </div>
+        <div class="text-right">
+          
+                   <asp:Button  CssClass="btn btn-primary btn-lg" ID="SubmitButton" Text="Submit" href="home.aspx" runat="server" />
     </div>
         </div>
              </div>

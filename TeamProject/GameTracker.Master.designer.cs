@@ -10,7 +10,7 @@
 namespace TeamProject {
     
     
-    public partial class GameTracker {
+    public partial class tracker {
         
         /// <summary>
         /// head control.

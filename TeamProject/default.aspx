@@ -13,6 +13,13 @@
 <!DOCTYPE html>
 <html>
 <body>
+
+        
+
+  
+    <a href="table.aspx">List of games</a>
+
+
     <!--THis form is used to track the game and then sends it to the sql database -->
 <form runat="server">
     <div><h2>Day played?</h2>
@@ -28,7 +35,7 @@
 
  
 
-     <label class="control-label"  for="weekPlayedTextBox" >Week played</label>
+    <h2>Week Played?</h2>
         <asp:TextBox runat="server" Cssclass="form-control" TextMode="Date" ID="weekPlayedTextBox" placeholder="week_played" required="true"></asp:TextBox> 
 
 
@@ -47,8 +54,8 @@
 
     <asp:Button  CssClass="btn btn-warning btn-lg" ID="cancel" Text="Cancel" runat="server"  UseSubmitBehavior="false" CausesValidation="false" onclick="cancel_Click" />
 
-  <a class="btn btn-primary btn-lg" ID="SubmitButtonText" Text="Send" href="home.aspx" />
-                   <asp:Button  CssClass="btn btn-primary btn-lg" ID="SubmitButton" Text="Submit" runat="server" onclick="Button1_Click" />
+
+                   <asp:Button  CssClass="btn btn-primary btn-lg" href="home.aspx" ID="SubmitButton" Text="Submit" runat="server" onclick="Button1_Click" />
 
 <p><asp:Label id="Label1" runat="server"/></p>
 </form>
@@ -56,8 +63,8 @@
 </body>
 </html>
         
-
-
+    <!--For some reason there is an error. it has the connection in the web config and the proper syntax. I followed the youtube channel video but its not working -->
+    <!--I also installed mysql.data nuget package-->
 </asp:Content>
 
 

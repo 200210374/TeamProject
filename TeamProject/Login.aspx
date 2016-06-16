@@ -23,13 +23,13 @@
          <div class="form-group">
                   
               </div>
-        <div class="text-right">
-            <a class="btn btn-warning btn-lg" ID="CancelButton" Text="Cancel" href="home.aspx" />
-                   <asp:Button  CssClass="btn btn-warning btn-lg" ID="Cancel" Text="Cancel" runat="server" />
-             </div>
         <div class="text-left">
-            <a class="btn btn-warning btn-lg" ID="SubmitButtonText" Text="Send" href="home.aspx" />
-                   <asp:Button  CssClass="btn btn-primary btn-lg" ID="SubmitButton" Text="Submit" runat="server" />
+        
+                   <asp:Button  CssClass="btn btn-warning btn-lg" ID="Cancel" Text="Cancel" href="home.aspx" runat="server" />
+             </div>
+        <div class="text-right">
+           
+                   <asp:Button  CssClass="btn btn-primary btn-lg" ID="SubmitButton" Text="Submit" href="home.aspx" runat="server" />
     </div>
         </div>
   </form>

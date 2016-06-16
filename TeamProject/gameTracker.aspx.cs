@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace TeamProject
 {
-    public partial class tracker : System.Web.UI.MasterPage
+    public partial class gameTracker : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
