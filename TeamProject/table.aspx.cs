@@ -14,23 +14,23 @@ namespace TeamProject
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            (!IsPostBack)
-                {
-                this.GetTracker();
+     //       (!IsPostBack)
+       //         {
+         //       this.GetTracker();
 
             }
 
 
         }
 
-        protected void GetTracker()
-        {
-            using (DefaultConnection con = new DefaultConnection())
+  //      protected void GetTracker()
+//        {
+       //     using (DefaultConnection con = new DefaultConnection())
 
-            {
-                var trackers = (fromAlltracker in db.tracker SELECT alltracker);
-                trackerGridView.DataSource = tracker.toList();
-                trackerGridView.DataBind();
+         //   {
+           //     var trackers = (fromAlltracker in db.tracker SELECT alltracker);
+             //   trackerGridView.DataSource = tracker.toList();
+               // trackerGridView.DataBind();
 
 
 
@@ -38,8 +38,8 @@ namespace TeamProject
 
 
 
-        }
+    //    }
 
 
-    }
-}
+  //  }
+//}
