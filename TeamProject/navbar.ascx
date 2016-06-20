@@ -17,7 +17,7 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-Left">
-                <li id="home" runat="server"><a href="Home page.aspx"><i class="fa fa-home fa-lg"></i>Home Page</a></li>
+                <li id="home" runat="server"><a href="Home.aspx"><i class="fa fa-home fa-lg"></i>Home Page</a></li>
                 <li id="register" runat="server"><a href="register-form.aspx"><i class="fa-fa-login fa-lg"></i>Register</a></li>
                 <li id="login" runat="server"><a href="Login.aspx"><i class="fa fa-login fa-lg"></i>Login</a></li>
                 <li id="edit" runat="server"><a href="edit.aspx"><i class="fa-fa-login fa-lg"></i>Edit account</a></li>

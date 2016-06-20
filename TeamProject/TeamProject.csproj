@@ -305,6 +305,13 @@
     <Compile Include="table.aspx.designer.cs">
       <DependentUpon>table.aspx</DependentUpon>
     </Compile>
+    <Compile Include="testUser.aspx.cs">
+      <DependentUpon>testUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="testUser.aspx.designer.cs">
+      <DependentUpon>testUser.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
@@ -374,6 +381,7 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="table.aspx" />
+    <Content Include="testUser.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

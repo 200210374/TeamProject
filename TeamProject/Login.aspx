@@ -5,36 +5,11 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="forms" runat="server">
 
-    <!-- This form is a login form that will look in the sql database to verify if a user has logged in correctly-->
-     <form method="POST" runat="server">
-    <div class="col-md-6">  
   
-         <div class="form-group">
-           
-        <label class="control-label" for="usernameTextBox">Username</label>
-        <asp:TextBox runat="server" Cssclass="form-control" ID="usernameTextBox" placeholder="username" required="true"></asp:TextBox> 
-    
-         <label class="control-label" for="passwordTextBox">password</label>
-        <asp:TextBox runat="server" TextMode="password" Cssclass="form-control" ID="passwordTextBox" placeholder="password" required="true"></asp:TextBox> 
-             </div>
-          <div class="form-group">
-          </div>
+    <asp:Login ID="Login1" runat="server" OnAuthenticate="Login1_Authenticate"></asp:Login>
 
-         <div class="form-group">
-                  
-              </div>
-        <div class="text-left">
-        
-                   <asp:Button  CssClass="btn btn-warning btn-lg" ID="Cancel" Text="Cancel" href="home.aspx" runat="server" />
-             </div>
-        <div class="text-right">
-           
-                   <asp:Button  CssClass="btn btn-primary btn-lg" ID="SubmitButton" Text="Submit" href="home.aspx" runat="server" />
-    </div>
-        </div>
-  </form>
- 
-  
 
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:sqlDataConnectionString %>" InsertCommand="INSERT INTO Users (username, password, email)
+VALUES ('New','Test','new@yahoo.ca'); " SelectCommand="SELECT * FROM [Users]"></asp:SqlDataSource>
 
 </asp:Content>
