@@ -27,7 +27,7 @@
    
         <h1>Games played</h1>
 
-    <asp:GridView ID="GridView1" runat="server" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
+    <asp:GridView ID="GridView1" runat="server" AllowSorting="True" AutoGenerateColumns="False" align="center" DataSourceID="SqlDataSource1">
         <Columns>
             <asp:BoundField DataField="day_played" HeaderText="day_played" SortExpression="day_played" />
             <asp:BoundField DataField="week_played" HeaderText="week_played" SortExpression="week_played" />
@@ -50,6 +50,9 @@
 
 
     <div><h2>Day played?</h2>
+        <asp:TextBox runat="server" Cssclass="form-control" TextMode="Date" ID="day_played" placeholder="day_played" required="true"></asp:TextBox> 
+
+        <!--
     <asp:RadioButtonList id="radiolistdate" align="center" runat="server">
    <asp:ListItem selected="true">Monday</asp:ListItem>
    <asp:ListItem>Tuesday</asp:ListItem>
@@ -58,7 +61,11 @@
          <asp:ListItem>Friday</asp:ListItem>
          <asp:ListItem>Saturday</asp:ListItem>
          <asp:ListItem>Sunday</asp:ListItem>
-</asp:RadioButtonList></div>
+</asp:RadioButtonList></div> -->
+
+
+
+
 
  
 
@@ -67,10 +74,16 @@
 
 
     <h2>Which team won?</h2>
+
+              <asp:TextBox runat="server" Cssclass="form-control" TextMode="Date" ID="who_wonTextBox" placeholder="week_played" required="true"></asp:TextBox> 
+
+        <!--
 <asp:RadioButtonList id="who_won" align="center" runat="server">
    <asp:ListItem selected="true">Team 1</asp:ListItem>
    <asp:ListItem>Team 2</asp:ListItem>
 </asp:RadioButtonList>
+            -->
+
     <h1>Points Scored</h1>
     <h2>Team 1</h2>
     <label class="control-label"  for="PointsTextBox" ></label>
@@ -85,7 +98,7 @@
     <asp:Button  CssClass="btn btn-warning btn-lg" ID="cancel" Text="Cancel" runat="server"  UseSubmitBehavior="false" CausesValidation="false" onclick="cancel_Click" />
 
 
-                   <asp:Button  CssClass="btn btn-primary btn-lg" href="home.aspx" ID="SubmitButton" Text="Submit" runat="server" onclick="Button1_Click" />
+                   <asp:Button  CssClass="btn btn-primary btn-lg" href="home.aspx" ID="SubmitButton" Text="Submit" runat="server" onclick="SaveButton_Click" />
 
         </p>
 </form>

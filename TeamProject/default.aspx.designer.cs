@@ -31,6 +31,15 @@ namespace TeamProject {
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
         
         /// <summary>
+        /// day_played control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox day_played;
+        
+        /// <summary>
         /// radiolistdate control.
         /// </summary>
         /// <remarks>
@@ -47,6 +56,15 @@ namespace TeamProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox weekPlayedTextBox;
+        
+        /// <summary>
+        /// who_wonTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox who_wonTextBox;
         
         /// <summary>
         /// who_won control.

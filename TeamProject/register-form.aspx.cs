@@ -8,6 +8,9 @@ using System.Web.ModelBinding;
 using System.Data;
 using System.Data.SqlClient;
 
+using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.AspNet.Identity;
+using Microsoft.Owin.Security;
 
 namespace TeamProject
 {
@@ -17,50 +20,91 @@ namespace TeamProject
         {
 
         }
+        
+
+        public string GetConnectionString()
+        {
+         
+            return System.Configuration.ConfigurationManager.ConnectionStrings["sqlDataConnectionString"].ConnectionString;
+
+
+        }
+
+
+
 
         protected void SaveButton_Click(object sender, EventArgs e)
         {
-            string username = usernameTextBox.Text;
-            string password = passwordTextBox.Text;
-            string email = emailTextBox.Text;
-            SqlConnection con = new SqlConnection
-          ("Data Source=.;Initial Catalog = sqlDataEntities;Trusted_Connection=true;");
-            SqlCommand com = new SqlCommand();
+
+
+
+           //This is used for the next method to grab user input
+            SaveUser(usernameTextBox.Text,
+                              passwordTextBox.Text,
+                              emailTextBox.Text);
+                              
+
+
+        }
+        //This method makes an array 
+        private void SaveUser(string username, string password, string email)
+        {
+           
+
+            SqlConnection conn = new SqlConnection(GetConnectionString());
+            string sql = "INSERT INTO Users (username, Password, email) VALUES "
+                        + " (@username,@Password,@email)";
 
             try
             {
+                conn.Open();
 
-                con.Open();
-                // Create a object of SqlCommand class
-                com.Connection = con; //Pass the connection object to Command
-                com.CommandType = CommandType.StoredProcedure; // We will use stored procedure.
-                com.CommandText = "spInsertUser"; //Stored Procedure Name
+                //I created an array that will hold the values made by the user. After the user clicks submit it will put it into the database.
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                SqlParameter[] param = new SqlParameter[3];
+                
 
-                com.Parameters.Add("@username", SqlDbType.NVarChar).Value = username;
-                com.Parameters.Add("@password", SqlDbType.NVarChar).Value = password;
-                com.Parameters.Add("@email", SqlDbType.Char).Value = email;
-   
-                com.ExecuteNonQuery();
-                con.Close();
+
+                param[0] = new SqlParameter("@username", SqlDbType.Char, 50);
+                param[1] = new SqlParameter("@password", SqlDbType.Char, 15);
+                param[2] = new SqlParameter("@email", SqlDbType.Char, 10);
+
+
+                param[0].Value = username;
+                param[1].Value = password;
+                param[2].Value = email;
+
+
+
+                for (int x = 0; x < param.Length; x++)
+                {
+                    cmd.Parameters.Add(param[x]);
+                }
+
+                cmd.CommandType = CommandType.Text;
+                cmd.ExecuteNonQuery();
             }
-            catch (Exception ex)
+            catch (System.Data.SqlClient.SqlException ex)
             {
-
+                string msg = "Insert Error:";
+                msg += ex.Message;
+                throw new Exception(msg);
             }
             finally
             {
-         
-
+                conn.Close();
             }
         }
 
-    
 
-        protected void CancelButton_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("home.aspx");
-        }
+
 
 
     }
-}
+
+       
+
+    }
+
+
+ 
